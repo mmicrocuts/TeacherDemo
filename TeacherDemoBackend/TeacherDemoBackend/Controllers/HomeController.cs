@@ -17,14 +17,14 @@ namespace TeacherDemoBackend.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Tietoa sovelluksesta";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Yhteystiedot";
 
             return View();
         }
@@ -38,6 +38,11 @@ namespace TeacherDemoBackend.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Testi()
+        {
+            return Content("Hello, World!");
         }
     }
 }
