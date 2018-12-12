@@ -40,9 +40,18 @@ namespace TeacherDemoBackend.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public IActionResult Testi()
+        public IActionResult TietoaOppimisesta()
         {
-            return Content("Hello, World!");
+            ViewData["Message"] = "Tietoteksti";
+
+            return View();
+        }
+
+        public IActionResult Oppitunti1()
+        {
+            ViewData["Message"] = "Sisältö";
+
+            return View();
         }
     }
 }
