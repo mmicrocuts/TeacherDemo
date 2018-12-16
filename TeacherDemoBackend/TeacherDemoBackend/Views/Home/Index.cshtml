@@ -2,6 +2,26 @@
     ViewData["Title"] = "Etusivu";
 }
 
+<h2>Englannin kielen opetusta vasta-alkajille</h2>
+
+<h3>EnglishTeacher tekee kielen opiskelusta helppoa ja hauskaa!</h3>
+
+<button type="button" id="btn1" class="btn">Aloita oppiminen</button> <button type="button" id="btn2" class="btn">Tietoa meistä</button>
+
+<script>
+    document.getElementById("btn1").onclick = siirrySivulle1;
+
+    function siirrySivulle1() {
+        window.location.assign("/Home/Oppitunti1")
+    }
+
+    document.getElementById("btn2").onclick = siirrySivulle2;
+
+    function siirrySivulle2() {
+        window.location.assign("/Home/About")
+    }
+
+</script>
 
 
 

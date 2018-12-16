@@ -1,7 +1,10 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
+
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
 body {
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 20px;
 }
 
@@ -10,13 +13,155 @@ body {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    font-family: 'Raleway';
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+/*Yläpalkki otsikkotaso*/
+
+.jumbotron {
+    margin: 0 auto;
+    padding-top: 75px;
+    min-height: 250px;
+    background-color: #00ce9b;
+    color: #fff;
+    text-align: center;
+    font-family: 'Century Gothic';
+    text-transform: uppercase;
+    font-size: 50px;
 }
+
+.jumbotron > a {
+    padding-top: 75px;
+    background-color: #00ce9b;
+    color: #fff;
+    text-align: center;
+    font-family: 'Century Gothic';
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+    .jumbotron > a:hover,
+    .jumbotron > a:focus {
+        padding-top: 75px;
+        background-color: #00ce9b;
+        color: #fff;
+        text-align: center;
+        font-family: 'Century Gothic';
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 50px;
+    }
+
+/*Yläpalkki*/
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    min-height: 100px;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.navbar-inverse {
+    background-color: #00b29c;
+    border-color: #00b29c;
+    
+}
+
+/*Yläpalkki linkit*/
+    .navbar-inverse .navbar-brand {
+        margin-top: 30px;
+        font-family: 'Century Gothic';
+        text-transform: uppercase;
+        font-size: 30px;
+        color: #fff;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+        -webkit-transition-delay: 0.4s;
+        transition-delay: 0.4s;
+    }
+
+        .navbar-inverse .navbar-brand:hover,
+        .navbar-inverse .navbar-brand:focus {
+            color: #fff;
+            background-color: #00ce9b;
+            margin-top: 25px;
+        }
+
+.navbar-inverse .navbar-text {
+        color: #9d9d9d;
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        margin-top: 30px;
+        font-family: 'Century Gothic';
+        text-transform: uppercase;
+        font-size: 16px;
+        color: #fff;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+        -webkit-transition-delay: 0.4s;
+        transition-delay: 0.4s;
+    }
+
+        .navbar-inverse .navbar-nav > li > a:hover,
+        .navbar-inverse .navbar-nav > li > a:focus {
+            color: #fff;
+            background-color: #00ce9b;
+            margin-top: 25px;
+        }
+
+/*Yläpalkki dropdown*/
+.dropdown {
+    color: #fff;
+    background-color: #00b29c;
+}
+
+
+.dropdown-toggle {
+    color: #fff;
+    background-color: #00b29c;
+}
+
+    .dropdown-toggle:hover, dropdown-toggle:focus {
+        color: #fff;
+        background-color: #00ce9b;
+    }
+
+.dropdown open {
+    color: #fff;
+    background-color: #00ce9b;
+}
+
+.dropdown-menu, .dropdown-menu > li {
+    color: #fff;
+    background-color: #00ce9b;
+}
+
+    .dropdown-menu > li:hover, .dropdown-menu > li:focus {
+        color: #fff;
+        background-color: #00ce9b;
+        opacity: 0.8;
+    }
+    /*Napit*/
+    .btn {
+        background-color: #00b29c;
+        color: #fff;
+    }
+
+    .btn:active, .btn:hover {
+        background-color: #00ce9b;
+        color: #fff;
+    }
+
+
+    /* Carousel */
+    .carousel-caption p {
+        font-size: 20px;
+        line-height: 1.4;
+    }
 
 /* Make .svg files in the carousel display properly in older browsers */
 .carousel-inner .item img[src$=".svg"] {

@@ -42,14 +42,14 @@ namespace TeacherDemoBackend.Controllers
 
         public IActionResult TietoaOppimisesta()
         {
-            ViewData["Message"] = "Tietoteksti";
+            ViewData["Message"] = "";
 
             return View();
         }
 
         public IActionResult Oppitunti1()
         {
-            ViewData["Message"] = "Sisältö";
+            ViewData["Message"] = "";
 
             return View();
         }
