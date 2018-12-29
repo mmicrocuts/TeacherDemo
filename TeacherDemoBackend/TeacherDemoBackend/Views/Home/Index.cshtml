@@ -2,26 +2,55 @@
     ViewData["Title"] = "Etusivu";
 }
 
-<h2>Englannin kielen opetusta vasta-alkajille</h2>
+<div class="container" align="center">
 
-<h3>EnglishTeacher tekee kielen opiskelusta helppoa ja hauskaa!</h3>
+    <div class="row" align="center">
 
-<button type="button" id="btn1" class="btn">Aloita oppiminen</button> <button type="button" id="btn2" class="btn">Tietoa meistä</button>
+        <div class="col">
+            <h2>Englannin kielen opetusta vasta-alkajille</h2>
 
-<script>
-    document.getElementById("btn1").onclick = siirrySivulle1;
+            <h3>EnglishTeacher tekee kielen opiskelusta helppoa ja hauskaa!</h3>
+        </div>
+        <div class="col">
+            <img src="~/images/teacher1.png" id="kuvat" alt="kuva" />
+        </div>
 
-    function siirrySivulle1() {
-        window.location.assign("/Home/Oppitunti1")
-    }
+    </div>
 
-    document.getElementById("btn2").onclick = siirrySivulle2;
+    <div class="row">
+        <div class="col">
+            <button type="button" id="btn1" class="btn">Aloita oppiminen</button> <button type="button" id="btn2" class="btn">Tietoa meistä</button>
+        </div>
+    </div>
+</div>
 
-    function siirrySivulle2() {
-        window.location.assign("/Home/About")
-    }
+    <script>
+        document.getElementById("btn1").onclick = siirrySivulle1;
 
-</script>
+        function siirrySivulle1() {
+            window.location.assign("/Home/Oppitunti1")
+        }
+
+        document.getElementById("btn2").onclick = siirrySivulle2;
+
+        function siirrySivulle2() {
+            window.location.assign("/Home/About")
+        }
+
+
+    </script>
+
+    <script>
+            //window.onload = valitseKuva;
+
+            //var kuvat = new Array("~/images/books.png", "~/images/learning.png", "~/images/supplies.png");
+
+            //function valitseKuva() {
+            //    randomNum = Math.floor((Math.random() * valitseKuva.length));
+            //    document.getElementById("kuvat").src = valitseKuva[randomNum];
+            //}
+
+    </script>
 
 
 
