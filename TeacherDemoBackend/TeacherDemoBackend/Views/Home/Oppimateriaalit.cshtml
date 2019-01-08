@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewData["Title"] = "Oppimateriaalit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container" align="center">
+
+    <div class="row" align="center">
+
+        <h2>Oppimateriaalit</h2>
+
+    </div>
+
+    <div class="row" align="center">
+
+        <h4>Tutustu yksittäisiin oppitunteihin ja harjoituksiin</h4>
+
+    </div>
+
+    <div class="row" align="center">
+
+        <img src="~/images/student.png" alt="kuva1" />
+
+    </div>
+
+    <div class="row">
+
+        <button type="button" id="btn1" class="btn">Oppitunti 1</button>
+
+        <button type="button" id="btn2" class="btn">Harjoituksia 1</button>
+
+        <button type="button" id="btn3" class="btn">Oppitunti 2</button>
+
+        <button type="button" id="btn4" class="btn">Harjoituksia 2</button>
+
+    </div>
+
+    <div class="row">
+
+        <h4>Lisää oppitunteja ja harjoituksia tulossa pian!</h4>
+
+    </div>
+
+</div>
+
+    <script>
+        document.getElementById("btn1").onclick = siirrySivulle1;
+
+        function siirrySivulle1() {
+            window.location.assign("/Home/Oppitunti1")
+        }
+
+        document.getElementById("btn2").onclick = siirrySivulle2;
+
+        function siirrySivulle2() {
+            window.location.assign("/Home/Harjoituksia1")
+        }
+
+        document.getElementById("btn3").onclick = siirrySivulle3;
+
+        function siirrySivulle3() {
+            window.location.assign("/Home/Oppitunti2")
+        }
+
+        document.getElementById("btn4").onclick = siirrySivulle4;
+
+        function siirrySivulle4() {
+            window.location.assign("/Home/Harjoituksia2")
+        }
+
+    </script>

@@ -17,74 +17,85 @@
     </environment>
 </head>
 <body>
-    
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Etusivu</a></li>
-                    <li class="dropdown">
-                        <button class="dropbtn">Oppimateriaalit</button>
-                        <div class="dropdown-content">
-                            <a asp-area="" asp-controller="Home" asp-action="Oppitunti1">Oppitunti 1</a>
-                            <a href="#">Page 1-2</a>
-                            <a href="#">Page 1-3</a>
-                        </div>
-                    </li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="TietoaOppimisesta">Tietoa oppimisesta</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">Tietoa sovelluksesta</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Ota yhteyttä</a></li>
+    <div id="holder">
 
-                </ul>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Etusivu</a></li>
+                        <li class="dropdown">
+                            <a class="dropbtn" asp-area="" asp-controller="Home" asp-action="Oppimateriaalit">Oppimateriaalit</a>
+                            <div class="dropdown-content">
+                                <a asp-area="" asp-controller="Home" asp-action="Oppitunti1">Oppitunti 1</a>
+                                <a asp-area="" asp-controller="Home" asp-action="Harjoituksia1">Harjoituksia 1</a>
+                                <a asp-area="" asp-controller="Home" asp-action="Oppitunti2">Oppitunti 2</a>
+                                <a asp-area="" asp-controller="Home" asp-action="Harjoituksia2">Harjoituksia 2</a>
+                            </div>
+                        </li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="TietoaOppimisesta">Tietoa oppimisesta</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="About">Tietoa sovelluksesta</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Ota yhteyttä</a></li>
+
+                    </ul>
+                </div>
             </div>
+        </nav>
+
+        <partial name="_CookieConsentPartial" />
+
+
+        <div class="jumbotron">
+            <a asp-area="" asp-controller="Home" asp-action="Index">EnglishTeacher</a>
         </div>
-    </nav>
 
-    <partial name="_CookieConsentPartial" />
+        <div class="container body-content">
 
+            @RenderBody()
 
-    <div class="jumbotron">
-        <a asp-area="" asp-controller="Home" asp-action="Index">EnglishTeacher</a>
+        </div>
+
+        <div id="jumbotron-special">
+
+            <p>
+                EnglishTeacher 2019
+                <br />
+                © Vilma Vainikka
+            </p>
+
+        </div>
+
     </div>
 
-    <div class="container body-content">
+        <environment include="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+            </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+        </environment>
 
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - EnglishTeacher</p>
-        </footer>
-    </div>
-
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
-
-    @RenderSection("Scripts", required: false)
+        @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -3,27 +3,65 @@ for details on configuring this project to bundle and minify static web assets. 
 
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+html, body {
+    height: 100%;
+}
+
+#holder {
+    min-height: 100%;
+    position: relative;
 }
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
     padding-top: 30px;
+    padding-bottom: 250px;
     padding-left: 30px;
     padding-right: 30px;
     font-family: 'Raleway';
 }
 
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 1em 0;
+    padding: 0 7em 0 7em;
+    display: inline-block;
+    text-align: left;
+    line-height: 24px;
+}
+
+a {
+    color: #003366;
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: initial;
+    color: #0059b3;
+}
+
+address {
+    display: inline-block;
+    text-align: left;
+    font-size: 18px;
+}
+
+small {
+    line-height: 28px;
+}
+
 /*Yläpalkki otsikkotaso*/
 
 .jumbotron {
-    margin: 0 auto;
+    margin: 60px auto 0 auto;
     padding-top: 100px;
-    min-height: 300px;
-    background-color: #00ce9b;
+    height: 300px;
+    background-color: #003366;
     color: #fff;
     text-align: center;
     font-family: 'Century Gothic';
@@ -33,7 +71,7 @@ body {
 
 .jumbotron > a {
     padding-top: 75px;
-    background-color: #00ce9b;
+    background-color: #003366;
     color: #fff;
     text-align: center;
     font-family: 'Century Gothic';
@@ -42,17 +80,17 @@ body {
     font-size: 50px;
 }
 
-    .jumbotron > a:hover,
-    .jumbotron > a:focus {
+.jumbotron > a:hover,
+.jumbotron > a:focus {
         padding-top: 75px;
-        background-color: #00ce9b;
+        background-color: #003366;
         color: #fff;
         text-align: center;
         font-family: 'Century Gothic';
         text-transform: uppercase;
         text-decoration: none;
         font-size: 50px;
-    }
+}
 
 /*Yläpalkki*/
 .navbar .navbar-nav {
@@ -68,8 +106,8 @@ body {
 }
 
 .navbar-inverse {
-    background-color: #00b29c;
-    border-color: #00b29c;
+    background-color: #e24912;
+    border-color: #e24912;
     min-height: 60px;
     margin-bottom: 0px;
 }
@@ -90,17 +128,17 @@ body {
         transition-delay: 0.4s;
     }
 
-        .navbar-inverse .navbar-brand:hover,
-        .navbar-inverse .navbar-brand:focus {
-            color: #fff;
-            background-color: #00ce9b;
-        }
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+        color: #fff;
+        background-color: #ff794d;
+}
 
 .navbar-inverse .navbar-text {
         color: #9d9d9d;
 }
 
-    .navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .navbar-nav > li > a {
         padding-top: 30px;
         padding-bottom: 30px;
         margin-top: 0px;
@@ -114,20 +152,20 @@ body {
         -webkit-transition-delay: 0.4s;
         transition-delay: 0.4s;
         vertical-align: middle;
-    }
+}
 
-        .navbar-inverse .navbar-nav > li > a:hover,
-        .navbar-inverse .navbar-nav > li > a:focus {
-            color: #fff;
-            background-color: #00ce9b;
-        }
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+        color: #fff;
+        background-color: #ff794d;
+}
 
 
 /*Yläpalkki dropdown*/
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: #00b29c;
+    background-color: #e24912;
     color: #fff;
     padding-left: 15px;
     padding-right: 15px;
@@ -140,7 +178,6 @@ body {
 }
 
 
-/* The container <li> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -152,37 +189,33 @@ body {
     transition-delay: 0.4s;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #00b29c;
+    background-color: #e24912;
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
-    /* Links inside the dropdown */
-    .dropdown-content a {
-        color: #fff;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
+    
+.dropdown-content a {
+   color: #fff;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+}
 
-        /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {
-            background-color: #00ce9b;
-        }
+.dropdown-content a:hover {
+    background-color: #ff794d;
+}
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #00ce9b;
+    background-color: #ff794d;
 }
 
 .dropdown:hover {
@@ -190,55 +223,58 @@ body {
 }
 
 
-/*.dropdown {
-    color: #fff;
-    background-color: #00b29c;
+/*Kuvat*/
+img {
+    margin: 1.5em 0;
 }
 
 
-.dropdown-toggle {
-    color: #fff;
-    background-color: #00b29c;
-}
-
-    .dropdown-toggle:hover, dropdown-toggle:focus {
-        color: #fff;
-        background-color: #00ce9b;
-    }
-
-.dropdown open {
-    color: #fff;
-    background-color: #00ce9b;
-}
-
-.dropdown-menu, .dropdown-menu > li {
-    color: #fff;
-    background-color: #00ce9b;
-}
-
-    .dropdown-menu > li:hover, .dropdown-menu > li:focus {
-        color: #fff;
-        background-color: #00ce9b;
-        opacity: 0.8;
-    }*/
-
-
-
-    /*Napit*/
+/*Napit*/
 .btn {
-    margin: 10px 20px 10px 0px;
-    padding: 10px;
-    background-color: #00b29c;
+    margin: 1em 1em 1em 0px;
+    font-size: 18px;
+    padding: 20px 30px 20px 30px;
+    background-color: #00aeed;
+    color: #fff;
+    border-radius: initial;
+}
+
+.btn:active, .btn:hover {
+    background-color: #2dbcef;
     color: #fff;
 }
 
-    .btn:active, .btn:hover {
-        margin: 10px 20px 10px 0px;
-        padding: 10px;
-        background-color: #00ce9b;
-        color: #fff;
-    }
+#jumbotron-special {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 200px;
+    background-color: #00aeed;
+    text-align: center;
+}
 
+#jumbotron-special > p {
+    padding-top: 50px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Century Gothic';
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+/*
+footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #00b29c;
+}
+*/
 
 /*#kuvat {
     display: block;
@@ -257,4 +293,21 @@ body {
     .carousel-caption {
         display: none;
     }
+}
+
+/*Oppitunti1 sisällön näyttämisen oletusmääritykset*/
+#sisalto1 {
+    display: block;
+}
+
+#sisalto2 {
+    display: none;
+}
+
+#sisalto3 {
+    display: none;
+}
+
+#sisalto4 {
+    display: none;
 }

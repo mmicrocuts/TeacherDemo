@@ -53,5 +53,33 @@ namespace TeacherDemoBackend.Controllers
 
             return View();
         }
+
+        public IActionResult Oppitunti2()
+        {
+            ViewData["Message"] = "";
+
+            return View();
+        }
+
+        public IActionResult Harjoituksia1()
+        {
+            ViewData["Message"] = "";
+
+            return View();
+        }
+
+        public IActionResult Harjoituksia2()
+        {
+            ViewData["Message"] = "";
+
+            return View();
+        }
+
+        public IActionResult Oppimateriaalit()
+        {
+            ViewData["Message"] = "";
+
+            return View();
+        }
     }
 }

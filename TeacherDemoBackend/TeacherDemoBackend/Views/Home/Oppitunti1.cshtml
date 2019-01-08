@@ -4,8 +4,90 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Oppitunti 1</h2>
-<h3>Lesson 1</h3>
+<div class="container" align="center">
+    <div class="row" align="center">
+        <div class="col">
+            <h2>Oppitunti 1</h2>
+        </div>
+    </div>
+    <hr />
+    <div id="sisalto1">
+        <div class="row" align="center">
+            <h3>Hei ja tervetuloa Oppitunnille 1!</h3>
+            <h3>Hello and welcome to Lesson 1!</h3>
+        </div>
+        <div class="row" align="center">
+            <button id="btn1" class="btn">Eteenpäin</button>
+        </div>
+    </div>
 
+    <div id="sisalto2">
+        <div class="row" align="center">
+            <h3>Ihan ensimmäiseksi opettelemme tervehtimään:</h3>
+            <h3><span style="color:#e24912;">Hello!</span> ja <span style="color:#e24912;">Hi!</span> ovat tavallisimpia tervehdyksiä.</h3>
+        </div>
+        <div class="row" align="center">
+            <button id="btn2" class="btn">Ok!</button>
+        </div>
+    </div>
+    <div id="sisalto3">
+        <div class="row" align="center">
+            <h3>Lisäksi voit käyttää näitä vaihtoehtoja, riippuen vuorokaudenajasta:</h3>
+            <ul style="list-style-type:none; color:#e24912;">
+                <li><h3>Good morning! <span style="color:initial">- Hyvää huomenta!</span></h3></li>
+                <li><h3>Good afternoon! <span style="color:initial">- Hyvää päivää!</span></h3></li>
+                <li><h3>Good evening! <span style="color:initial">- Hyvää iltaa!</span></h3></li>
+            </ul>
+        </div>
+        <div class="row" align="center">
+            <button id="btn3" class="btn">Selvä!</button>
+        </div>
+    </div>
+    <div id="sisalto4">
+        <div class="row" align="center">
+            <h3>Nyt olet oppinut tärkeimmät englanninkieliset tervehdykset!</h3>
+            <h3>On siis aika siirtyä testaamaan osaamisesi!</h3>
+        </div>
+        <div class="row" align="center">
+            <button id="btn4" class="btn">Olen valmis</button><button id="btn5" class="btn">Kertaan vielä</button>
+        </div>
+    </div>
+</div>
 
+<script>
+    //NAPIT - SISÄLTÖBOKSIEN MUUTOKSET
+    document.getElementById("btn1").addEventListener("click", function () {
+        var divName1 = document.getElementById("sisalto1");
+        var divName2 = document.getElementById("sisalto2");
+        divName1.style.display = 'none';
+        divName2.style.display = 'block';
+    });
 
+    document.getElementById("btn2").addEventListener("click", function () {
+        var divName2 = document.getElementById("sisalto2");
+        var divName3 = document.getElementById("sisalto3");
+        divName2.style.display = 'none';
+        divName3.style.display = 'block';
+    });
+
+    document.getElementById("btn3").addEventListener("click", function () {
+        var divName3 = document.getElementById("sisalto3");
+        var divName4 = document.getElementById("sisalto4");
+        divName3.style.display = 'none';
+        divName4.style.display = 'block';
+    });
+
+    document.getElementById("btn4").onclick = siirrySivulle;
+
+    function siirrySivulle() {
+        window.location.assign("/Home/Harjoituksia1")
+    }
+
+    document.getElementById("btn5").addEventListener("click", function () {
+        var divName4 = document.getElementById("sisalto4");
+        var divName1 = document.getElementById("sisalto1");
+        divName4.style.display = 'none';
+        divName1.style.display = 'block';
+    });
+
+</script>
