@@ -4,5 +4,277 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Harjoituksia 1</h2>
+<div class="container" align="center">
+    <div class="row" align="center">
+        <div class="col">
+            <h2>Harjoituksia 1</h2>
+        </div>
+    </div>
+    <hr />
+    <!--Harjoitus 1-->
+    <div id="h1sisalto1">
+        <div class="row" align="center">
+            <h3>Tervetuloa testaamaan osaamisesi harjoitusten parissa!</h3>
+            <h3>Test your knowledge by completing these exercises!</h3>
+        </div>
+        <div class="row" align="center">
+            <img src="~/images/learning1.png" alt="oppiminen" />
+        </div>
+        <div class="row" align="center">
+            <button id="btn1" class="btn">Eteenpäin</button>
+        </div>
+    </div>
 
+    <div id="h1sisalto2">
+        <div class="row" align="center">
+            <h3>Tapaat tuttavasi aamupäivällä. Miten tervehdit häntä englanniksi?</h3>
+        </div>
+        <div class="row" align="center">
+            <button id="btn2" class="hbtn">Good evening!</button><br />
+            <button id="btn3" class="hbtn">Good morning!</button><br />
+            <button id="btn4" class="hbtn">Good day!</button>
+        </div>
+    </div>
+    <div id="h1sisalto3">
+        <div class="row" align="center">
+            <h3>Oikein!</h3>
+        </div>
+        <div class="row" align="center">
+            <img src="~/images/right.png" alt="oikeinmerkki" />
+        </div>
+        <div class="row" align="center">
+            <button id="btn5" class="btn">Eteenpäin</button>
+        </div>
+    </div>
+    <div id="h1sisalto4">
+        <div class="row" align="center">
+            <h3>Vastasit väärin.</h3>
+        </div>
+        <div class="row" align="center">
+            <img src="~/images/wrong.png" alt="väärinmerkki" />
+        </div>
+        <div class="row" align="center">
+            <button id="btn6" class="btn">Kokeile uudelleen</button><button id="btn7" class="btn">Näytä oikea vastaus</button>
+        </div>
+    </div>
+    <div id="h1sisalto5">
+        <div class="row" align="center">
+            <h3>Oikea vastaus olisi ollut:</h3>
+            <br />
+            <h3 style="color:#007109">Good morning!</h3>
+        </div>
+        <div class="row" align="center">
+            <button id="btn8" class="btn">Eteenpäin</button>
+        </div>
+    </div>
+
+    <!--Harjoitus 2-->
+    <div id="h1sisalto6">
+        <div class="row" align="center">
+            <h3>Miten tervehdit ystävääsi englanniksi?</h3>
+        </div>
+        <div class="row" align="center">
+            <form onSubmit="return false;" align="center">
+                <input id="k1" type="text" />
+            </form>
+        </div>
+        <div class="row" align="center">
+            <button id="btn9" class="btn">Vastaa</button>
+        </div>
+    </div>
+
+    <div id="h1sisalto7">
+        <div class="row" align="center">
+            <h3>Oikein!</h3>
+        </div>
+        <div class="row" align="center">
+            <img src="~/images/right.png" alt="oikeinmerkki" />
+        </div>
+        <div class="row" align="center">
+            <button id="btn10" class="btn">Eteenpäin</button>
+        </div>
+    </div>
+    <div id="h1sisalto8">
+        <div class="row" align="center">
+            <h3>Vastasit väärin.</h3>
+        </div>
+        <div class="row" align="center">
+            <img src="~/images/wrong.png" alt="väärinmerkki" />
+        </div>
+        <div class="row" align="center">
+            <button id="btn11" class="btn">Kokeile uudelleen</button><button id="btn12" class="btn">Näytä oikea vastaus</button>
+        </div>
+    </div>
+    <div id="h1sisalto9">
+        <div class="row" align="center">
+            <h3>Oikea vastaus olisi ollut:</h3>
+            <br />
+            <h3><span style="color:#007109">Hello!</span> tai <span style="color:#007109">Hi!</span></h3>
+        </div>
+        <div class="row" align="center">
+            <button id="btn13" class="btn">Eteenpäin</button>
+        </div>
+    </div>
+    <div id="h1sisalto10">
+        <div class="row" align="center">
+            <h3>Nyt olet oppinut tervehtimään englanniksi, sekä testannut oppimaasi.</h3>
+            <br />
+            <h3>Aika jatkaa eteenpäin!</h3>
+        </div>
+        <div class="row" align="center">
+            <button id="btn14" class="btn">Jatka opiskelua</button><button id="btn15" class="btn">Jatkan myöhemmin</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    //TEHT 1 NAPIT - SISÄLTÖBOKSIEN MUUTOKSET
+    document.getElementById("btn1").addEventListener("click", function () {
+        var divName1 = document.getElementById("h1sisalto1");
+        var divName2 = document.getElementById("h1sisalto2");
+        divName1.style.display = 'none';
+        divName2.style.display = 'block';
+    });
+
+    //tehtävästä väärä vastaus kohtaan
+    document.getElementById("btn2").addEventListener("click", function () {
+        var divName2 = document.getElementById("h1sisalto2");
+        var divName4 = document.getElementById("h1sisalto4");
+        divName2.style.display = 'none';
+        divName4.style.display = 'block';
+    });
+
+    document.getElementById("btn4").addEventListener("click", function () {
+        var divName2 = document.getElementById("h1sisalto2");
+        var divName4 = document.getElementById("h1sisalto4");
+        divName2.style.display = 'none';
+        divName4.style.display = 'block';
+    });
+
+    //tehtävästä oikea vastaus kohtaan
+    document.getElementById("btn3").addEventListener("click", function () {
+        var divName2 = document.getElementById("h1sisalto2");
+        var divName3 = document.getElementById("h1sisalto3");
+        divName2.style.display = 'none';
+        divName3.style.display = 'block';
+    });
+
+    //oikein meni kohdasta + näytä vastaus kohdasta eteenpäin
+    document.getElementById("btn5").addEventListener("click", function () {
+        var divName3 = document.getElementById("h1sisalto3");
+        var divName6 = document.getElementById("h1sisalto6");
+        divName3.style.display = 'none';
+        divName6.style.display = 'block';
+    });
+
+    document.getElementById("btn8").addEventListener("click", function () {
+        var divName5 = document.getElementById("h1sisalto5");
+        var divName6 = document.getElementById("h1sisalto6");
+        divName5.style.display = 'none';
+        divName6.style.display = 'block';
+    });
+
+    //väärin meni kohdasta tehtävän alkuun
+    document.getElementById("btn6").addEventListener("click", function () {
+        var divName4 = document.getElementById("h1sisalto4");
+        var divName2 = document.getElementById("h1sisalto2");
+        divName4.style.display = 'none';
+        divName2.style.display = 'block';
+    });
+
+    //väärin meni kohdasta näytä vastaus kohtaan
+    document.getElementById("btn7").addEventListener("click", function () {
+        var divName4 = document.getElementById("h1sisalto4");
+        var divName5 = document.getElementById("h1sisalto5");
+        divName4.style.display = 'none';
+        divName5.style.display = 'block';
+    });
+
+    //Teht2
+    
+    //vertaa tekstikentän syötettä oikeisiin vastauksiin
+
+    document.getElementById("btn9").addEventListener("click", function () {
+
+        var kayttajanVastaus = document.getElementById("k1").value;
+        var oikeatVastaukset = ["Hello", "Hello.", "Hello!", "hello", "hello.", "hello!"];
+
+        for (let indeksi = 0; indeksi < oikeatVastaukset.length; indeksi++) {
+
+            if (oikeatVastaukset.includes(kayttajanVastaus)) {
+                var divName6 = document.getElementById("h1sisalto6");
+                var divName7 = document.getElementById("h1sisalto7");
+                divName6.style.display = 'none';
+                divName7.style.display = 'block';
+            }
+
+            else {
+                var divName6 = document.getElementById("h1sisalto6");
+                var divName8 = document.getElementById("h1sisalto8");
+                divName6.style.display = 'none';
+                divName8.style.display = 'block';
+            }
+            
+        }
+
+        
+    });
+
+    //nappitapahtuma enterillä
+    var input = document.getElementById("k1");
+
+    input.addEventListener("keyup", function (event) {
+        
+        event.preventDefault();
+        
+        if (event.keyCode === 13) {
+            
+            document.getElementById("btn9").click();
+        }
+    });
+
+    //oikea vastaus kohdasta eteenpäin + näytä vastaus kohdasta eteenpäin
+    document.getElementById("btn10").addEventListener("click", function () {
+        var divName7 = document.getElementById("h1sisalto7");
+        var divName10 = document.getElementById("h1sisalto10");
+        divName7.style.display = 'none';
+        divName10.style.display = 'block';
+    });
+
+    document.getElementById("btn13").addEventListener("click", function () {
+        var divName9 = document.getElementById("h1sisalto9");
+        var divName10 = document.getElementById("h1sisalto10");
+        divName9.style.display = 'none';
+        divName10.style.display = 'block';
+    });
+  
+    //väärä vastaus kohdasta näytä oikea vastaus kohtaan
+    document.getElementById("btn12").addEventListener("click", function () {
+        var divName8 = document.getElementById("h1sisalto8");
+        var divName9 = document.getElementById("h1sisalto9");
+        divName8.style.display = 'none';
+        divName9.style.display = 'block';
+    });
+
+    //väärä vastaus kohdasta tehtävän alkuun
+    document.getElementById("btn11").addEventListener("click", function () {
+        var divName8 = document.getElementById("h1sisalto8");
+        var divName6 = document.getElementById("h1sisalto6");
+        divName8.style.display = 'none';
+        divName6.style.display = 'block';
+    });
+
+    //lopetusosiosta eteenpäin + kokonaan pois
+    document.getElementById("btn14").onclick = siirrySivulle3;
+
+    function siirrySivulle3() {
+        window.location.assign("/Home/Oppitunti2")
+    }
+
+    document.getElementById("btn15").onclick = siirrySivulle4;
+
+    function siirrySivulle4() {
+        window.location.assign("/Home/Index")
+    }
+</script>

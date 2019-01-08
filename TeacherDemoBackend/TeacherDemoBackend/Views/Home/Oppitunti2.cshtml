@@ -4,5 +4,28 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Oppitunti 2</h2>
+<div class="container" align="center">
+    <div class="row" align="center">
+        <div class="col">
+            <h2>Oppitunti 2</h2>
+        </div>
+    </div>
+    <hr />
+    <div id="o2sisalto1">
+        <div class="row" align="center">
+            <h3>Lisää oppitunteja tulossa pian!</h3>
+        </div>
+        <div class="row" align="center">
+            <button id="btn1" class="btn">Oppimateriaalit</button>
+        </div>
+    </div>
+   
+</div>
 
+<script>
+    document.getElementById("btn1").onclick = siirrySivulle;
+
+    function siirrySivulle() {
+        window.location.assign("/Home/Oppimateriaalit")
+    }
+</script>

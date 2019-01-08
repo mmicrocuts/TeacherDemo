@@ -28,9 +28,9 @@ h2,
 h3,
 h4 {
     margin: 1em 0;
-    padding: 0 7em 0 7em;
+    padding: 0 5em 0 5em;
     display: inline-block;
-    text-align: left;
+    text-align: center;
     line-height: 24px;
 }
 
@@ -49,6 +49,10 @@ address {
     display: inline-block;
     text-align: left;
     font-size: 18px;
+}
+
+.maailma {
+    float: right;
 }
 
 small {
@@ -244,6 +248,29 @@ img {
     color: #fff;
 }
 
+/*Teht. napit*/
+.hbtn {
+    margin: 0;
+    border: none;
+    border-top: 1px solid #fff;
+    width: 30%;
+    font-size: 18px;
+    padding: 15px 30px 15px 30px;
+    background-color: #00aeed;
+    color: #fff;
+    border-radius: initial;
+}
+
+.hbtn:active, .hbtn:hover {
+    background-color: #2dbcef;
+    color: #fff;
+}
+
+input {
+    margin: 1em 1em;
+    width: 30%;
+}
+
 #jumbotron-special {
     position: absolute;
     bottom: 0;
@@ -309,5 +336,47 @@ footer {
 }
 
 #sisalto4 {
+    display: none;
+}
+
+/*Harjoituksia1 sisällön näyttäminen*/
+/*Teht1*/
+#h1sisalto1 {
+    display: block;
+}
+
+#h1sisalto2 {
+    display: none;
+}
+
+#h1sisalto3 {
+    display: none;
+}
+
+#h1sisalto4 {
+    display: none;
+}
+
+#h1sisalto5 {
+    display: none;
+}
+/*Teht2*/
+#h1sisalto6 {
+    display: none;
+}
+
+#h1sisalto7 {
+    display: none;
+}
+
+#h1sisalto8 {
+    display: none;
+}
+
+#h1sisalto9 {
+    display: none;
+}
+
+#h1sisalto10 {
     display: none;
 }
