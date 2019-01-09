@@ -97,13 +97,21 @@ small {
 }
 
 /*Yläpalkki*/
+#vari {
+    background-color: #e24912;
+}
+
+#vari:hover {
+    background-color: #e24912;
+}
+
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
     margin-bottom: -6px;
 }
 
-.navbar .navbar-collapse {
+.navbar {
     text-align: center;
     min-height: 60px;
     margin-bottom: 0px;
@@ -139,6 +147,7 @@ small {
 }
 
 .navbar-inverse .navbar-text {
+        background-color: #e24912;
         color: #9d9d9d;
 }
 
@@ -164,21 +173,58 @@ small {
         background-color: #ff794d;
 }
 
+/*yläpalkin collapsed view määritykset*/
+.navbar-inverse .navbar-toggle {
+        background-color: #e24912;
+        margin-top: 1em;
+        border: none;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+        background-color: #ff794d !important;
+}
+
+.navbar .navbar-collapse {
+    border-color: #e24912;
+}
+
+.navbar-fixed-top .navbar-collapse {
+    max-height: 100%;
+    overflow-y: visible;
+}
+
+.navbar-collapse.collapse.in > ul.nav.navbar-nav {
+    width: 100%;
+    right: 0;
+    left: 0;
+}
+
+.navbar-collapse.collapse.in > ul > li {
+    width: 100%;
+    margin-top: -6px;
+    margin-bottom: 6px;
+}
+
+
+
+.navbar-collapse.collapse.in > ul > li > dropdown-content {
+    display: none;
+}
+
 
 /*Yläpalkki dropdown*/
-
 /* Dropdown Button */
 .dropbtn {
-    background-color: #e24912;
-    color: #fff;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    line-height: 20px;
-    font-size: 18px;
-    border: none;
-    text-transform: uppercase;
+        background-color: #e24912;
+        color: #fff;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        line-height: 20px;
+        font-size: 18px;
+        border: none;
+        text-transform: uppercase;
 }
 
 
